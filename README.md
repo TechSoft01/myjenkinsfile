@@ -1,1 +1,24 @@
 # myjenkinsfile
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        } 
+        stage('Build Stage') {
+            steps {
+                echo 'Code Build'
+            }
+        } 
+        
+        stage('Test Stage') {
+            steps {
+                echo 'Code Test'
+            }
+        }
+    }
+}
